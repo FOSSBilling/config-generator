@@ -11,7 +11,7 @@ Generator endpoint: `https://config.fossbilling.org/api/generate`
 - `domainName`: The domain name of the website, e.g. `fossbilling.org` **(required)**
 - `includeWWW`: Whether to include the `www` subdomain or not, `true` or `false` **(by default, true)**
 
-Here is an example query: `https://config.fossbilling.org/api/generate?webServer=nginx&sourcePath=/var/www/fossbilling.org/src&domainName=fossbilling.org&includeWWW=true`
+Here is an example query: https://config.fossbilling.org/api/generate?webServer=nginx&sourcePath=/var/www/fossbilling.org/src&domainName=fossbilling.org&includeWWW=true
 
 ## How to customize the templates
 

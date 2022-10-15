@@ -1,6 +1,9 @@
 import Head from "next/head";
+import { Theme, useTheme } from '@carbon/react'
 
 export default function PageLayout({ children, title }) {
+  const { theme } = useTheme();
+  const backgroundColor = (theme === 'g100') ? '#161616' : '#fff';
   return (
     <div>
       <Head>
@@ -28,7 +31,14 @@ export default function PageLayout({ children, title }) {
       </Head>
 
       <main>
-        {children}
+      <Theme>
+        <body style={{
+          backgroundColor: {backgroundColor},
+        }}>
+          {children}
+          {backgroundColor}
+        </body>
+      </Theme>
       </main>
     </div>
   );

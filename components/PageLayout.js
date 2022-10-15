@@ -31,14 +31,13 @@ export default function PageLayout({ children, title }) {
       </Head>
 
       <main>
-      <Theme>
-        <body style={{
-          backgroundColor: {backgroundColor},
-        }}>
-          {children}
-          {backgroundColor}
-        </body>
-      </Theme>
+        <Theme theme="g100">
+          <body style={{
+            backgroundColor: "#161616",
+          }}>
+            {children}
+          </body>
+        </Theme>
       </main>
     </div>
   );

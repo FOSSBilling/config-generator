@@ -36,7 +36,7 @@ const Index = () => {
   return (
     <PageLayout home title="FOSSBilling configuration generator">
     <div className="container" align="center">
-      <img src="https://fossbilling.org/img/logo-black.svg" alt="FOSSBilling logo" width="350px" />
+      <img src="https://fossbilling.org/img/logo-white.svg" alt="FOSSBilling logo" width="350px" />
       <div>
         <h1
           className="text-sans"

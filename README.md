@@ -16,6 +16,14 @@ Here is an example query: https://config.fossbilling.org/api/generate?webServer=
 ## How to customize the templates
 
 ## How to deploy
+### Production
+The website will be rebuilt automatically after every push and deployed to Vercel. Outside contributors don't need to do anything to get the website deployed.
+
+### Testing locally
+1. Clone the repository
+2. Run `npm install` to install the dependencies
+3. Run `npm run dev` to start the development server
+4. Open `localhost:3000` in your browser
 
 ## Licensing
 This tool is open source software and is released under the Apache v2.0 license. See [LICENSE](LICENSE) for the full license terms.

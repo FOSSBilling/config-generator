@@ -1,6 +1,7 @@
 import { Checkbox, Stack, Select, SelectItem, TextInput, Link } from '@carbon/react'
 import { LogoGithub, Need, LogoDiscord, Debug } from '@carbon/icons-react';
 import { useState, useEffect } from "react"
+import PageLayout from "../components/PageLayout";
 import Result from "../components/Result"
 
 const Index = () => {
@@ -33,7 +34,7 @@ const Index = () => {
   });
 
   return (
-    <>
+    <PageLayout home title="FOSSBilling configuration generator">
     <div className="container" align="center">
       <img src="https://fossbilling.org/img/logo-black.svg" alt="FOSSBilling logo" width="350px" />
       <div>
@@ -115,7 +116,7 @@ const Index = () => {
           </Link>
       </div>
     </div>
-    </>
+    </PageLayout>
   )
 }
 

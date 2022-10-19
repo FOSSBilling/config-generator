@@ -1,5 +1,6 @@
 import '../styles/style.scss'
 import { GlobalTheme } from '@carbon/react'
+import React from 'react'
 
 function ConfigGenerator({ Component, pageProps }) {
   return (

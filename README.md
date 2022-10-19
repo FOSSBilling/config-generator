@@ -1,5 +1,8 @@
 # [FOSSBilling configuration generator](https://config.fossbilling.org)
 
+![Screenshot](https://user-images.githubusercontent.com/35808275/196001874-c6ec9c0a-b564-4285-aca3-68e6265adbc7.png)
+
+
 A simple configuration generator made by the FOSSBilling team. This tool makes use of IBM's [Carbon Design System](https://carbondesignsystem.com/) on a Next.js server. Use it now at [config.fossbilling.org](https://config.fossbilling.org)!
 
 ## API documentation

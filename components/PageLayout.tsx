@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Theme, useTheme } from '@carbon/react'
 
-export default function PageLayout({ children, title }) {
+export default function PageLayout({ children, title }: { children: React.ReactNode, title: string }) {
   const { theme } = useTheme();
   const backgroundColor = (theme === 'g100') ? '#161616' : '#fff';
   return (

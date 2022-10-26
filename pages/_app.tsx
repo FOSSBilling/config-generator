@@ -1,4 +1,4 @@
-import '../styles/style.scss'
+import 'app/styles/style.scss'
 import { GlobalTheme } from '@carbon/react'
 import React from 'react'
 import { AppProps } from 'next/app'

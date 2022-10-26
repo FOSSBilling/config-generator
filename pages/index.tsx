@@ -2,8 +2,8 @@ import { Checkbox, Stack, Select, SelectItem, TextInput, Link } from '@carbon/re
 import { LogoGithub, Need, LogoDiscord, Debug } from '@carbon/icons-react';
 import { useState, useEffect } from 'react'
 import React from 'react'
-import PageLayout from "../components/PageLayout";
-import Result from "../components/Result"
+import PageLayout from "app/components/PageLayout";
+import Result from "app/components/Result"
 
 const Index = () => {
   const [webServer, setWebServer] = useState("nginx");

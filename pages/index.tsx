@@ -86,7 +86,7 @@ const Index = () => {
         marginTop: '16px',
       }}>
         <Stack gap={6} orientation="horizontal">
-          <Checkbox defaultChecked labelText={`Also include www.${domainName || "fossbilling.org"}`} id="www" onChange={(e) => setIncludeWWW(e.target.checked)} />
+          <Checkbox defaultChecked labelText={`Also include www.${domainName || "fossbilling.org"}`} invalidText="Invalid" warnText="Warning" id="www" onChange={(e) => setIncludeWWW(e.target.checked)} />
         </Stack>
       </div>
 

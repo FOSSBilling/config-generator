@@ -1,4 +1,6 @@
 import Head from "next/head";
+// @todo - remove ignore statement once carbon-design-system/carbon#12513 resolved.
+// @ts-ignore
 import { Theme, useTheme } from '@carbon/react'
 
 export default function PageLayout({ children, title }: { children: React.ReactNode, title: string }) {

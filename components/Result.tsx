@@ -1,4 +1,6 @@
 import React from "react";
+// @todo - remove ignore statement once carbon-design-system/carbon#12513 resolved.
+// @ts-ignore
 import { CodeSnippet, InlineNotification } from '@carbon/react'
 
 export default function Result({ conf, err }: { conf: string, err: string }) {

@@ -1,3 +1,5 @@
+// @todo - remove ignore statement once carbon-design-system/carbon#12513 resolved.
+// @ts-ignore
 import { Checkbox, Stack, Select, SelectItem, TextInput, Link } from '@carbon/react'
 import { LogoGithub, Need, LogoDiscord, Debug } from '@carbon/icons-react';
 import { useState, useEffect } from 'react'

@@ -3,7 +3,7 @@ import { promises as fs } from 'fs';
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    var { webServer, sourcePath, domainName, includeWWW } = req.query;
+    var { webServer, sourcePath, domainName, includeWWW, includeSSL } = req.query;
     
     // When a parameter is defined twice, use the first one.
     // This keeps the variables as strings instead of arrays if they are defined more than once.
@@ -18,6 +18,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         WWW = (includeWWW == 'false') ? false : true;
     }
 
+    if (Array.isArray(includeSSL)){
+        var SSL = (includeSSL[0] == 'false') ? false : true;
+    } else {
+        SSL = (includeSSL == 'false') ? false : true;
+    }
+
+
     const templateDirectory = path.join(process.cwd(), 'templates');
     const supportedWebServers = ['nginx'];
 
@@ -25,10 +32,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.status(400).send('Invalid web server. Accepted values are: ' + supportedWebServers.join(', '));
         return;
     }
+    
+    if(SSL){
+        var template = await fs.readFile(templateDirectory + `/${webServer}.ssl.conf`, 'utf8');        
+    }else{
+        var template = await fs.readFile(templateDirectory + `/${webServer}.conf`, 'utf8');
 
-    // Read the template file
-    var template = await fs.readFile(templateDirectory + `/${webServer}.conf`, 'utf8');
-
+    }
+ 
     // Some server-specific replacements
     switch (webServer) {
         case "nginx":

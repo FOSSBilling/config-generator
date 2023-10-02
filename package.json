@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/carbon__icons-react": "^11.26.1",
-    "@types/node": "^20.7.0",
+    "@types/node": "^20.8.1",
     "@types/react": "^18.2.24",
     "typescript": "^5.2.2"
   }

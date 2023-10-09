@@ -11,7 +11,7 @@
     "next": "^13.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0"
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "@types/carbon__icons-react": "^11.26.1",

@@ -14,7 +14,7 @@
     "sass": "^1.69.3"
   },
   "devDependencies": {
-    "@types/carbon__icons-react": "^11.26.1",
+    "@types/carbon__icons-react": "^11.26.2",
     "@types/node": "^20.8.6",
     "@types/react": "^18.2.31",
     "typescript": "^5.2.2"

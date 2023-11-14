@@ -8,7 +8,7 @@
   "dependencies": {
     "@carbon/icons-react": "^11.26.0",
     "@carbon/react": "^1.42.0",
-    "next": "^14.0.1",
+    "next": "^14.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.5"

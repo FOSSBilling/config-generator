@@ -17,6 +17,6 @@
     "@types/carbon__icons-react": "^11.26.2",
     "@types/node": "^20.9.0",
     "@types/react": "^18.2.37",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   }
 }

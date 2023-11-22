@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "schedule:automergeDaily",
     "schedule:weekly",
     ":automergeDigest",
     ":automergeLinters",
@@ -19,7 +18,7 @@
     "enabled": true,
     "automerge": true
   },
+  "automergeSchedule": ["at any time"],
   "automergeStrategy": "squash",
-  "automergeType": "branch",
-  "rangeStrategy": "bump"
+  "automergeType": "branch"
 }

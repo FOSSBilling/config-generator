@@ -18,5 +18,8 @@
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
-  }
+  },
+  "automergeStrategy": "squash",
+  "automergeType": "branch",
+  "rangeStrategy": "bump"
 }

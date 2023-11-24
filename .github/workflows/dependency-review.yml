@@ -7,8 +7,8 @@
 name: 'Dependency Review'
 on: 
   push:
-    branches: 
-      - 'renovate/**'
+    branches-ignore:
+      - main
   pull_request:
     branches: [ "main" ]
 

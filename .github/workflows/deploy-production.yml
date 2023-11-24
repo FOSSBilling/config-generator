@@ -14,7 +14,9 @@ jobs:
   deploy-production:
     name: Build and Deploy Production
     runs-on: ubuntu-latest
-    environment: Production
+    environment: 
+      name: Production
+      url: ${{ steps.deploy-url.outputs.url }}
     steps:
       - uses: actions/checkout@v4
       - name: Install Vercel CLI
@@ -24,4 +26,8 @@ jobs:
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }} > vercel-out.txt
+      - name: Set Environment URL
+        id: deploy-url
+        if: ${{ success() }}
+        run: echo "url=$(tail -n 1 vercel-out.txt)" >> $GITHUB_OUTPUT

@@ -17,7 +17,9 @@ jobs:
   deploy-preview:
     name: Build and Deploy Preview
     runs-on: ubuntu-latest
-    environment: Preview
+    environment: 
+      name: Preview
+      url: ${{ steps.deploy-url.outputs.url }}
     if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.base.repo.id != github.event.pull_request.head.repo.id) || github.event_name == 'push' }}
     steps:
       - uses: actions/checkout@v4
@@ -28,4 +30,8 @@ jobs:
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} > vercel-out.txt
+      - name: Set Environment URL
+        id: deploy-url
+        if: ${{ success() }}
+        run: echo "url=$(tail -n 1 vercel-out.txt)" >> $GITHUB_OUTPUT

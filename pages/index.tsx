@@ -12,12 +12,14 @@ const Index = () => {
   const [sourcePath, setSourcePath] = useState("/var/www/fossbilling.org/src");
   const [domainName, setDomainName] = useState("fossbilling.org");
   const [includeWWW, setIncludeWWW] = useState(true);
+  const [includeSSL, setIncludeSSL] = useState(true);
+    
   const [conf, setConf] = useState("");
   const [err, setErr] = useState("");
 
   const callTheAPI = async () => {
     try {
-      const res = await fetch(`/api/generate?webServer=${webServer}&sourcePath=${sourcePath}&domainName=${domainName}&includeWWW=${includeWWW}`);
+      const res = await fetch(`/api/generate?webServer=${webServer}&sourcePath=${sourcePath}&domainName=${domainName}&includeWWW=${includeWWW}&includeSSL=${includeSSL}`);
       const data = await res.text();
       if (res.ok) {
         setConf(data)
@@ -92,6 +94,12 @@ const Index = () => {
       }}>
         <Stack gap={6} orientation="horizontal">
           <Checkbox defaultChecked labelText={`Also include www.${domainName || "fossbilling.org"}`} invalidText="Invalid" warnText="Warning" id="www" onChange={(e) => setIncludeWWW(e.target.checked)} />
+        </Stack>
+        <Stack gap={6} orientation="horizontal">
+          <Checkbox defaultChecked labelText={`Enable SSL`}
+          invalidText="Invalid" warnText="Warning" id="ssl" 
+          onChange={(e) => setIncludeSSL(e.target.checked)} 
+           />
         </Stack>
       </div>
 

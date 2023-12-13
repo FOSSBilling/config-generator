@@ -9,3 +9,10 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+
+.warning {
+    color: red;
+    border-radius: 10px;
+    padding: 20x;
+    height: 60px
+}

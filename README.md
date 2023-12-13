@@ -1,3 +1,6 @@
+> **Warning**:
+This repository has been archived and is no longer maintained. For information about how to get started with FOSSBilling check the official [documentation](https://fossbilling.org/docs/getting-started) where help is provided for getting started on multiple platforms.
+
 # [FOSSBilling configuration generator](https://config.fossbilling.org)
 
 ![Screenshot](https://user-images.githubusercontent.com/35808275/196001874-c6ec9c0a-b564-4285-aca3-68e6265adbc7.png)

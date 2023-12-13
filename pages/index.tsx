@@ -3,9 +3,9 @@
 import { Checkbox, Stack, Select, SelectItem, TextInput, Link } from '@carbon/react'
 import { LogoGithub, Need, LogoDiscord, Debug } from '@carbon/icons-react';
 import { useState, useEffect } from 'react'
-import React from 'react'
+import React from 'react'; 
 import PageLayout from "app/components/PageLayout";
-import Result from "app/components/Result"
+import Result from "app/components/Result";
 
 const Index = () => {
   const [webServer, setWebServer] = useState("nginx");
@@ -39,6 +39,9 @@ const Index = () => {
   return (
     <PageLayout title="FOSSBilling configuration generator">
     <div className="container">
+      <div className="warning">
+          WARNING: This tool has been archived and is not guaranteed to provide a working configuration. 
+      </div>
       <img src="https://fossbilling.org/img/logo-white.svg" alt="FOSSBilling logo" width="350px" />
       <div>
         <h1

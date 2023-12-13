@@ -66,6 +66,7 @@ const Index = () => {
             id="webServer"
             defaultValue="nginx"
             labelText="Web server"
+            placeholder="web server"
             onChange={(e) => setWebServer(e.target.value)}>
             <SelectItem value="nginx" text="nginx" />
           </Select>
